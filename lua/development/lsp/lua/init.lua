@@ -1,9 +1,6 @@
-local util = require "development.lsp.util"
-
 local lspconfig = require "lspconfig"
 
 lspconfig.lua_ls.setup({
-  on_attach = util.on_attach,
   settings = {
     Lua = {
       runtime = {
