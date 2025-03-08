@@ -1,6 +1,6 @@
 local map = vim.keymap.set
 
-map("n", "<leader>e", ":NvimTreeToggle<CR>")
+map("n", "<leader>eo", ":NvimTreeToggle<CR>")
 map("n", "<leader>ef", ":NvimTreeFindFile<CR>")
 
 return {

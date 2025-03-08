@@ -19,5 +19,6 @@ vim.opt.rtp:prepend(lazypath)
 local lazy = require "lazy"
 
 lazy.setup({
-  import = 'plugins.nvim-tree',
+  { import = 'plugins.nvim-tree' },
+  { import = 'plugins.theme' }, 
 })
