@@ -27,4 +27,5 @@ lazy.setup({
   { import = 'plugins.cmp' }, 
   { import = 'plugins.lspconfig' }, 
   { import = 'plugins.mason' }, 
+  { import = 'plugins.telescope' }, 
 })
