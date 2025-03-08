@@ -23,4 +23,5 @@ lazy.setup({
   { import = 'plugins.theme' }, 
   { import = 'plugins.autoclose' }, 
   { import = 'plugins.nvim-tree-icons' }, 
+  { import = 'plugins.comment' }, 
 })
