@@ -21,4 +21,5 @@ local lazy = require "lazy"
 lazy.setup({
   { import = 'plugins.nvim-tree' },
   { import = 'plugins.theme' }, 
+  { import = 'plugins.autoclose' }, 
 })
