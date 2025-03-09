@@ -1,3 +1,4 @@
+
 vim.keymap.set('n', 'gD', vim.lsp.buf.declaration)
 vim.keymap.set('n', 'gd', vim.lsp.buf.definition)
 vim.keymap.set('n', 'K', vim.lsp.buf.hover)
@@ -11,7 +12,13 @@ vim.keymap.set('n', '<space>wl', function()
 end)
 
 vim.keymap.set('n', '<space>D', vim.lsp.buf.type_definition)
-vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename)
+
+vim.keymap.set('n', '<space>rn', function()
+  vim.lsp.buf.rename()
+  vim.cmd("wa")
+end)
+
+
 vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action)
 vim.keymap.set('n', 'gr', vim.lsp.buf.references)
 
