@@ -29,4 +29,5 @@ lazy.setup({
   { import = 'plugins.mason' },
   { import = 'plugins.telescope' },
   { import = 'plugins.treesitter' },
+  { import = 'plugins.git' },
 })
