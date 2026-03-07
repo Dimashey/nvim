@@ -6,4 +6,3 @@ return {
     comment.setup()
   end
 }
-
