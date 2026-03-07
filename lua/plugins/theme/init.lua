@@ -1,12 +1,8 @@
 return {
-  'projekt0n/github-nvim-theme',
-  name = 'github-theme',
+  'AlexvZyl/nordic.nvim',
+  lazy = false,
+  priority = 1000,
   config = function()
-    local theme = require "github-theme"
-
-    theme.setup()
-
-    vim.cmd('colorscheme github_dark_dimmed')
+    require('nordic').load()
   end
 }
-
