@@ -28,3 +28,9 @@ opt.incsearch = true     -- Show search matches while typing
 -- Behavior
 opt.clipboard = "unnamedplus" -- Use system clipboard
 opt.undofile = true          -- Persistent undo history
+
+-- Display hidden characters like space
+opt.list = true
+vim.opt.listchars = {
+  space = '·', -- display space as '.'
+}
