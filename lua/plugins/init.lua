@@ -30,4 +30,6 @@ lazy.setup({
   { import = 'plugins.telescope' },
   { import = 'plugins.treesitter' },
   { import = 'plugins.git' },
+  { import = 'plugins.vim-vsnip' },
+  { import = 'plugins.vim-vsnip-integ' },
 })
