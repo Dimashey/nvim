@@ -1,6 +1,4 @@
-local lspconfig = require "lspconfig"
-
-lspconfig.gopls.setup({
+vim.lsp.config['gopls'] = {
   settings = {
     gopls = {
       analyses = {
@@ -10,4 +8,6 @@ lspconfig.gopls.setup({
       gofumpt = true,
     },
   },
-})
+}
+
+vim.lsp.enable('gopls')

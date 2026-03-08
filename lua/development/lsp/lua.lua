@@ -1,6 +1,8 @@
-local lspconfig = require "lspconfig"
+--[[
+-- Lua LSP configuration
+--]]--
 
-lspconfig.lua_ls.setup({
+vim.lsp.config['lua_ls'] = {
   settings = {
     Lua = {
       runtime = {
@@ -25,4 +27,6 @@ lspconfig.lua_ls.setup({
       },
     },
   },
-})
+}
+
+vim.lsp.enable('lua_ls')
