@@ -33,4 +33,5 @@ opt.undofile = true          -- Persistent undo history
 opt.list = true
 vim.opt.listchars = {
   space = '·', -- display space as '.'
+  tab = "→ ", -- display tabe as '→ '
 }
