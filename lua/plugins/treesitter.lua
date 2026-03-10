@@ -2,9 +2,9 @@ return {
   'nvim-treesitter/nvim-treesitter',
   build = ':TSUpdate',
   config = function()
-    local treesitter = require "nvim-treesitter"
+    local treesitter = require "nvim-treesitter.config"
 
-    treesitter.setup({
+    treesitter.setup {
       ensure_installed = {
         "lua",
         "typescript",
@@ -22,6 +22,6 @@ return {
       indent = {
         enable = true,
       },
-    })
+    }
   end
 }
