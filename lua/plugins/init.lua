@@ -33,4 +33,5 @@ lazy.setup({
   { import = 'plugins.vim-vsnip-integ' },
   { import = 'plugins.telescope' },
   { import = 'plugins.colorizer' },
+  { import = 'plugins.dap' },
 })
