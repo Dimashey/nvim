@@ -55,3 +55,9 @@
 | `<space>wa` | Normal | Add workspace folder |
 | `<space>wr` | Normal | Remove workspace folder |
 | `<space>wl` | Normal | List workspace folders |
+
+## Diagnostics
+
+| Key | Mode | Action |
+|-----|------|--------|
+| `<space>e` | Normal | Show diagnostic float (width 80) |

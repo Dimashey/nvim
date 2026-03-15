@@ -34,4 +34,6 @@ lazy.setup({
   { import = 'plugins.telescope' },
   { import = 'plugins.colorizer' },
   { import = 'plugins.dap' },
+  { import = 'plugins.conform' },
+  { import = 'plugins.nvim-lint' },
 })

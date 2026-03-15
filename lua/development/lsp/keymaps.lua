@@ -22,5 +22,11 @@ vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action)
 vim.keymap.set('n', 'gr', vim.lsp.buf.references)
 
 vim.keymap.set('n', '<space>f', function()
-  vim.lsp.buf.format { async = true }
+  local conform = require "conform"
+
+  conform.format({ async = true, lsp_format = "fallback" })
+end)
+
+vim.keymap.set('n', '<space>e', function()
+  vim.diagnostic.open_float({ width = 80 })
 end)
