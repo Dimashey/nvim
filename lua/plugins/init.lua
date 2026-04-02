@@ -35,4 +35,5 @@ lazy.setup({
   { import = 'plugins.colorizer' },
   { import = 'plugins.conform' },
   { import = 'plugins.nvim-lint' },
+  { import = 'plugins.claude' },
 })
