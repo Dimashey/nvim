@@ -36,4 +36,5 @@ lazy.setup({
   { import = 'plugins.conform' },
   { import = 'plugins.nvim-lint' },
   { import = 'plugins.claude' },
+  { import = 'plugins.terminal' },
 })
