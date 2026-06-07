@@ -1,12 +1,10 @@
 return {
-  "vague-theme/vague.nvim",
-  lazy = false,
-  priority = 1000,
-  config = function()
-    local vague = require "vague"
+  "projekt0n/github-nvim-theme",
+  config = function(_, opts)
+    local theme = require "github-theme"
 
-    vague.setup()
+    theme.setup {}
 
-    vim.cmd("colorscheme vague")
-  end
+    vim.cmd('colorscheme github_dark_dimmed')
+  end,
 }
