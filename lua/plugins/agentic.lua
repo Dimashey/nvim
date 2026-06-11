@@ -6,45 +6,47 @@ return {
   },
   keys = {
     {
-      "<leader>]",
-      function()
-        local agentic = require("agentic")
-
-        agentic.toggle()
-      end,
+      "<C-]>",
+      function() require("agentic").toggle() end,
       mode = { "n", "v", "i" },
       desc = "Toggle Agentic Chat"
     },
     {
-      "<leader>[",
-      function()
-        local agentic = require("agentic")
-
-        agentic.new_session()
-      end,
+      "<C-s>",
+      function() require("agentic").add_selection_or_file_to_context() end,
+      mode = { "n", "v" },
+      desc = "Add file or selection to Agentic to Context"
+    },
+    {
+      "<C-[>",
+      function() require("agentic").new_session() end,
       mode = { "n", "v", "i" },
       desc = "New Agentic Session"
     },
     {
-      "<leader>r", -- ai Restore
+      "<C-_>", -- ai Restore (macOS sends C-_ for C-/)
       function()
-        local agentic = require("agentic")
-
-        agentic.restore_session()
+        require("agentic").restore_session()
       end,
       desc = "Agentic Restore session",
       silent = true,
       mode = { "n", "v", "i" },
     },
     {
-      "<leader>s",
+      "<leader>ad", -- ai Diagnostics
       function()
-        local agentic = require("agentic")
-
-        agentic.add_selection_or_file_to_context()
+        require("agentic").add_current_line_diagnostics()
       end,
-      mode = { "n", "v" },
-      desc = "Add file or selection to Agentic to Context"
+      desc = "Add current line diagnostic to Agentic",
+      mode = { "n" },
+    },
+    {
+      "<leader>aD", -- ai all Diagnostics
+      function()
+        require("agentic").add_buffer_diagnostics()
+      end,
+      desc = "Add all buffer diagnostics to Agentic",
+      mode = { "n" },
     },
   },
 }
