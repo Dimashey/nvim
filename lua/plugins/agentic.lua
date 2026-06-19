@@ -32,21 +32,5 @@ return {
       silent = true,
       mode = { "n", "v", "i" },
     },
-    {
-      "<leader>ad", -- ai Diagnostics
-      function()
-        require("agentic").add_current_line_diagnostics()
-      end,
-      desc = "Add current line diagnostic to Agentic",
-      mode = { "n" },
-    },
-    {
-      "<leader>aD", -- ai all Diagnostics
-      function()
-        require("agentic").add_buffer_diagnostics()
-      end,
-      desc = "Add all buffer diagnostics to Agentic",
-      mode = { "n" },
-    },
   },
 }
