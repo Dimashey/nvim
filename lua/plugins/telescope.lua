@@ -9,7 +9,17 @@ return {
   config = function()
     local builtin = require('telescope.builtin')
 
-    vim.keymap.set('n', '<leader>ff', builtin.git_files, { desc = 'Telescope find files' })
+    -- Use git_files inside a git repo, otherwise fall back to find_files
+    local function find_files()
+      local is_git = vim.fn.systemlist('git rev-parse --is-inside-work-tree')[1] == 'true'
+      if is_git then
+        builtin.git_files()
+      else
+        builtin.find_files()
+      end
+    end
+
+    vim.keymap.set('n', '<leader>ff', find_files, { desc = 'Telescope find files' })
     vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
     vim.keymap.set('n', '<leader>fs', builtin.git_status, { desc = 'Telescope git status' })
     vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
